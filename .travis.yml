@@ -10,7 +10,7 @@ branches:
     - false-base
 
 before_script:
-  # - npm install -g firebase-tools
+  - npm install -g firebase-tools
   - npm install -g @angular/cli
 
 script:
@@ -23,8 +23,10 @@ deploy:
     token:
       secure: $FIREBASE_TOKEN
     project: "default"
+    skip_cleanup: true
     on:
       branch: master
+
   
 
 notifications:
