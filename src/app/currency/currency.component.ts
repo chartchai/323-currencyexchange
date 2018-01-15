@@ -41,7 +41,13 @@ export class CurrencyComponent implements OnInit {
     this.currentSource = currency;
   }
   onCurrentTargetClick(currency: string) {
-    this.currentTarget = currency;
+    if (currency === 'บาท') {
+      this.currentTarget = 'THB';
+    } else if (currency === 'ดอลลาร์') {
+      this.currentTarget = 'USD';
+    } else {
+      this.currentTarget = 'EUR';
+    }
   }
 
   onCalculated(amount: number) {
