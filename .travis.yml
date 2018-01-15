@@ -16,13 +16,22 @@ before_script:
 script:
   - ng build --prod
 
-after_success:
-  # - firebase deploy --token $FIREBASE_TOKEN
+after_success:  
   
 deploy:
   provider: firebase
   token:
-    secure: $FIREBASE_TOKEN    
+    secure: $FIREBASE_TOKEN
+  project: "default"
+  on:
+    branch: master
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  project: "false-base"
+  on:
+    branch: false-base
 
 notifications:
   email:
