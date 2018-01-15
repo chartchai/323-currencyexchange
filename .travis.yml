@@ -26,6 +26,14 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+  - provider: firebase
+    token:
+      secure: $FIREBASE_TOKEN
+    project: "false-base"
+    #use skip_cleanup when using the angular cli -> prevent the dist folder has been removed
+    skip_cleanup: true
+    on:
+      branch: false-base
 
   
 
