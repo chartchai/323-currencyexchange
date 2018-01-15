@@ -23,7 +23,7 @@
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false" id="selectTarget">{{currentTarget}} <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-left">
-          <li *ngFor="let currency of currencyList"><a id="target{{currency}}"(click)="onCurrentTargetClick(currency)">{{currency}}</a></li>
+          <li *ngFor="let currency of currencyListTH"><a id="target{{currency}}"(click)="onCurrentTargetClick(currency)">{{currency}}</a></li>
         </ul>
       </div>
       <button type="button" class="btn btn-default left-buffer" id="calBtn" (click)="onCalculated(amount.value)">calculate
