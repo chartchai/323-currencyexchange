@@ -20,7 +20,7 @@ export class CurrencyComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
   ngOnInit() {
     this.currencyList = [];
-    this.title = 'Currency Exchange';
+    this.title = 'Currency Change';
     this.currencyList.push('THB');
     this.currencyList.push('USD');
     this.currencyList.push('EUR');
