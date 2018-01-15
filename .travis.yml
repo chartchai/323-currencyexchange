@@ -25,12 +25,7 @@ deploy:
     project: "default"
     on:
       branch: master
-  - provider: firebase
-    token:
-      secure: $FIREBASE_TOKEN
-    project: "false-base"
-    on:
-      branch: false-base
+  
 
 notifications:
   email:
